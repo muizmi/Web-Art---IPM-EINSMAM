@@ -1,0 +1,161 @@
+/* Struktur dasar */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f4f4f4;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(to right, #076d00, #008a37);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.huruf-i {
+  position: relative;
+  display: inline-block;
+}
+
+.huruf-i img {
+  position: absolute;
+  top: -28px;
+  left: 12px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+a.tbl-biru {
+  background-color: #db3434;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+a.tbl-biru:hover {
+  background-color: red;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #db3434, #bae303);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.kata {
+  margin: 20px 0;
+}
+
+.gambar img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Konten */
+.content {
+  padding: 20px;
+  text-align: center;
+  line-height: 1.6;
+  flex: 1; /* agar mendorong footer ke bawah */
+}
+
+.card {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* Tombol Menu (untuk mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #008a37;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px;
+  }
+
+  header {
+    padding: 20px;
+  }
+}
